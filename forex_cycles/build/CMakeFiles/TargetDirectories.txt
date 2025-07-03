@@ -1,0 +1,3 @@
+/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles/forex_cycles.dir
+/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles/edit_cache.dir
+/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles/rebuild_cache.dir
