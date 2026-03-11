@@ -12,6 +12,8 @@ add_executable(forex_cycles
     src/test_igraph.cpp
     src/graph_builder.cpp
     src/cycle_finder.cpp
+    src/services/currency_service.cpp
+    src/engine/arbitrage_engine.cpp
 )
 
 

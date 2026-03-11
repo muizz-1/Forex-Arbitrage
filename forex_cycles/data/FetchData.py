@@ -3,63 +3,66 @@
 import yfinance as yf
 import pandas as pd
 import sys
+import itertools
+import random
 
 def fetch_forex_rates_to_stdout():
+
     currencies = [
-    "USD",  # United States Dollar
-    "EUR",  # The Euro 
-    "JPY",  # Japanese Yen
-    # "GBP",  # Great Britain Pound 
-    # "CHF", "AUD", 
-    # "CAD", "NZD",
-    "CNY", "INR", 
-    # "SEK", "NOK", "SGD", "ZAR", "HKD", "BRL",
-    # "MXN", "RUB", "KRW", 
-    "PKR",
-    "AED",
-    # "TRY",  # Turkish Lira
-    # "PLN",  # Polish Zloty
-    # "CZK",  # Czech Koruna
-    # "HUF",  # Hungarian Forint
-    # "DKK",  # Danish Krone
-    "ILS",  # Israeli Shekel
-    "SAR",  # Saudi Riyal
-    "EGP",  # Egyptian Pound
-    # "THB",  # Thai Baht
-    # "MYR",  # Malaysian Ringgit
-    # "IDR",  # Indonesian Rupiah
-    # "PHP",  # Philippine Peso
-    # "TWD",  # Taiwan Dollar
-    # "VND",  # Vietnamese Dong
-    # "CLP",  # Chilean Peso
-    "COP",  # Colombian Peso
-    "ARS",  # Argentine Peso
-    "NGN",  # Nigerian Naira
-    "KWD",  # Kuwaiti Dinar
-    "QAR",  # Qatari Riyal
+        "USD","EUR","JPY","GBP","CAD","NZD",
+        "MXN","RUB","KRW", "COP",  # Colombian Peso
+        "ARS",  # Argentine Peso
+        "NGN",  # Nigerian Naira
+        "KWD",  # Kuwaiti Dinar
+        "QAR",  # Qatari Riyal
+    ]
 
-]
-    pairs = [f"{base}{quote}=X" for base in currencies for quote in currencies if base != quote]
+    base = "USD"
 
-    try:
-        data = yf.download(
-            tickers=pairs,
-            period='1d',
-            interval='1d',
-            group_by='ticker',
-            threads=True,
-            progress=True
-        )
-    except Exception as e:
-        print(f"ERROR: Failed to download data: {e}", file=sys.stderr)
-        return
+    # Fetch USD pairs only
+    pairs = [f"{base}{c}=X" for c in currencies if c != base]
 
-    close_data = data.xs('Close', axis=1, level=1).dropna(axis=1, how='all')
-    latest = close_data.tail(1).T.dropna().reset_index()
-    latest.columns = ['symbol', 'rate']
+    data = yf.download(
+        tickers=pairs,
+        period="1d",
+        interval="1d",
+        group_by="ticker",
+        progress=True
+    )
 
-    # Send CSV-formatted output to stdout
-    latest.to_csv(sys.stdout, index=False)
+    close_data = data.xs('Close', axis=1, level=1).tail(1)
+
+    rates = {}
+
+    for c in currencies:
+        if c == base:
+            rates[c] = 1.0
+            continue
+
+        pair = f"{base}{c}=X"
+        if pair in close_data.columns:
+            rates[c] = float(close_data[pair])
+        else:
+            rates[c] = None
+
+    rows = []
+
+    for a, b in itertools.permutations(currencies, 2):
+
+        if rates[a] is None or rates[b] is None:
+            continue
+
+        rate = rates[b] / rates[a]
+        rate *= (1 + random.uniform(-0.0005, 0.0005))
+        rows.append({
+            "symbol": f"{a}{b}",
+            "rate": rate
+        })
+
+    df = pd.DataFrame(rows)
+
+    df.to_csv(sys.stdout, index=False)
+
 
 if __name__ == "__main__":
     fetch_forex_rates_to_stdout()
