@@ -1,5 +1,5 @@
-CMakeFiles/forex_cycles.dir/src/main.cpp.o: \
- /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/main.cpp \
+CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o: \
+ /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/engine/arbitrage_engine.cpp \
  /usr/include/stdc-predef.h \
  /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/engine/arbitrage_engine.hpp \
  /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/engine/engine_types.hpp \
@@ -134,7 +134,132 @@ CMakeFiles/forex_cycles.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/services/currency_service.hpp \
+ /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/engine/../parser.hpp \
+ /usr/include/c++/11/tuple /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/array \
+ /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/invoke.h \
+ /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/engine/../graph_builder.hpp \
+ /usr/local/include/igraph/igraph.h \
+ /usr/local/include/igraph/igraph_version.h \
+ /usr/local/include/igraph/igraph_decls.h \
+ /usr/local/include/igraph/igraph_export.h \
+ /usr/local/include/igraph/igraph_memory.h /usr/include/c++/11/stdlib.h \
+ /usr/local/include/igraph/igraph_error.h \
+ /usr/local/include/igraph/igraph_config.h \
+ /usr/local/include/igraph/igraph_random.h \
+ /usr/local/include/igraph/igraph_types.h /usr/include/inttypes.h \
+ /usr/include/c++/11/math.h /usr/include/c++/11/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/include/c++/11/bits/specfun.h /usr/include/c++/11/limits \
+ /usr/include/c++/11/tr1/gamma.tcc \
+ /usr/include/c++/11/tr1/special_function_util.h \
+ /usr/include/c++/11/tr1/bessel_function.tcc \
+ /usr/include/c++/11/tr1/beta_function.tcc \
+ /usr/include/c++/11/tr1/ell_integral.tcc \
+ /usr/include/c++/11/tr1/exp_integral.tcc \
+ /usr/include/c++/11/tr1/hypergeometric.tcc \
+ /usr/include/c++/11/tr1/legendre_function.tcc \
+ /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/11/tr1/poly_hermite.tcc \
+ /usr/include/c++/11/tr1/poly_laguerre.tcc \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
+ /usr/local/include/igraph/igraph_vector.h \
+ /usr/local/include/igraph/igraph_complex.h \
+ /usr/local/include/igraph/igraph_constants.h \
+ /usr/local/include/igraph/igraph_pmt.h \
+ /usr/local/include/igraph/igraph_vector_type.h \
+ /usr/local/include/igraph/igraph_pmt_off.h \
+ /usr/local/include/igraph/igraph_vector_pmt.h \
+ /usr/local/include/igraph/igraph_progress.h \
+ /usr/local/include/igraph/igraph_statusbar.h \
+ /usr/local/include/igraph/igraph_matrix.h \
+ /usr/local/include/igraph/igraph_matrix_pmt.h \
+ /usr/local/include/igraph/igraph_array.h \
+ /usr/local/include/igraph/igraph_array_pmt.h \
+ /usr/local/include/igraph/igraph_bitset.h \
+ /usr/local/include/igraph/igraph_dqueue.h \
+ /usr/local/include/igraph/igraph_dqueue_pmt.h \
+ /usr/local/include/igraph/igraph_stack.h \
+ /usr/local/include/igraph/igraph_stack_pmt.h \
+ /usr/local/include/igraph/igraph_heap.h \
+ /usr/local/include/igraph/igraph_heap_pmt.h \
+ /usr/local/include/igraph/igraph_psumtree.h \
+ /usr/local/include/igraph/igraph_strvector.h \
+ /usr/local/include/igraph/igraph_vector_list.h \
+ /usr/local/include/igraph/igraph_typed_list_pmt.h \
+ /usr/local/include/igraph/igraph_vector_ptr.h \
+ /usr/local/include/igraph/igraph_sparsemat.h \
+ /usr/local/include/igraph/igraph_datatype.h \
+ /usr/local/include/igraph/igraph_arpack.h \
+ /usr/local/include/igraph/igraph_qsort.h \
+ /usr/local/include/igraph/igraph_graph_list.h \
+ /usr/local/include/igraph/igraph_iterators.h \
+ /usr/local/include/igraph/igraph_interface.h \
+ /usr/local/include/igraph/igraph_constructors.h \
+ /usr/local/include/igraph/igraph_graphicality.h \
+ /usr/local/include/igraph/igraph_games.h \
+ /usr/local/include/igraph/igraph_matrix_list.h \
+ /usr/local/include/igraph/igraph_microscopic_update.h \
+ /usr/local/include/igraph/igraph_centrality.h \
+ /usr/local/include/igraph/igraph_paths.h \
+ /usr/local/include/igraph/igraph_components.h \
+ /usr/local/include/igraph/igraph_structural.h \
+ /usr/local/include/igraph/igraph_transitivity.h \
+ /usr/local/include/igraph/igraph_neighborhood.h \
+ /usr/local/include/igraph/igraph_topology.h \
+ /usr/local/include/igraph/igraph_bipartite.h \
+ /usr/local/include/igraph/igraph_cliques.h \
+ /usr/local/include/igraph/igraph_layout.h \
+ /usr/local/include/igraph/igraph_visitor.h \
+ /usr/local/include/igraph/igraph_community.h \
+ /usr/local/include/igraph/igraph_conversion.h \
+ /usr/local/include/igraph/igraph_attributes.h \
+ /usr/local/include/igraph/igraph_foreign.h \
+ /usr/local/include/igraph/igraph_motifs.h \
+ /usr/local/include/igraph/igraph_operators.h \
+ /usr/local/include/igraph/igraph_flow.h \
+ /usr/local/include/igraph/igraph_nongraph.h \
+ /usr/local/include/igraph/igraph_cocitation.h \
+ /usr/local/include/igraph/igraph_adjlist.h \
+ /usr/local/include/igraph/igraph_blas.h \
+ /usr/local/include/igraph/igraph_lapack.h \
+ /usr/local/include/igraph/igraph_mixing.h \
+ /usr/local/include/igraph/igraph_separators.h \
+ /usr/local/include/igraph/igraph_cohesive_blocks.h \
+ /usr/local/include/igraph/igraph_eigen.h \
+ /usr/local/include/igraph/igraph_hrg.h \
+ /usr/local/include/igraph/igraph_threading.h \
+ /usr/local/include/igraph/igraph_interrupt.h \
+ /usr/local/include/igraph/igraph_matching.h \
+ /usr/local/include/igraph/igraph_embedding.h \
+ /usr/local/include/igraph/igraph_scan.h \
+ /usr/local/include/igraph/igraph_graphlets.h \
+ /usr/local/include/igraph/igraph_epidemics.h \
+ /usr/local/include/igraph/igraph_lsap.h \
+ /usr/local/include/igraph/igraph_coloring.h \
+ /usr/local/include/igraph/igraph_eulerian.h \
+ /usr/local/include/igraph/igraph_cycles.h \
+ /usr/local/include/igraph/igraph_reachability.h \
+ /usr/local/include/igraph/igraph_bitset_list.h \
+ /usr/include/c++/11/unordered_map \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/node_handle.h \
+ /usr/include/c++/11/bits/unordered_map.h \
+ /usr/include/c++/11/bits/erase_if.h \
+ /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/engine/../cycle_finder.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/exception \
  /usr/include/c++/11/bits/exception_ptr.h \
@@ -156,12 +281,13 @@ CMakeFiles/forex_cycles.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
- /usr/include/c++/11/bits/unique_ptr.h \
- /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
- /usr/include/c++/11/ratio /usr/include/c++/11/limits \
- /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h
+ /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/algorithm \
+ /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/bits/algorithmfwd.h \
+ /usr/include/c++/11/bits/stl_heap.h \
+ /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/uniform_int_dist.h \
+ /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/bits/std_function.h \
+ /usr/include/c++/11/pstl/execution_defs.h

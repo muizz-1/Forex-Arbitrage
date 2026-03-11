@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles"
+CMAKE_SOURCE_DIR = "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build"
+CMAKE_BINARY_DIR = "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles" "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles" "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -152,6 +152,30 @@ src/cycle_finder.s: src/cycle_finder.cpp.s
 src/cycle_finder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.s
 .PHONY : src/cycle_finder.cpp.s
+
+src/engine/arbitrage_engine.o: src/engine/arbitrage_engine.cpp.o
+.PHONY : src/engine/arbitrage_engine.o
+
+# target to build an object file
+src/engine/arbitrage_engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o
+.PHONY : src/engine/arbitrage_engine.cpp.o
+
+src/engine/arbitrage_engine.i: src/engine/arbitrage_engine.cpp.i
+.PHONY : src/engine/arbitrage_engine.i
+
+# target to preprocess a source file
+src/engine/arbitrage_engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.i
+.PHONY : src/engine/arbitrage_engine.cpp.i
+
+src/engine/arbitrage_engine.s: src/engine/arbitrage_engine.cpp.s
+.PHONY : src/engine/arbitrage_engine.s
+
+# target to generate assembly for a file
+src/engine/arbitrage_engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.s
+.PHONY : src/engine/arbitrage_engine.cpp.s
 
 src/graph_builder.o: src/graph_builder.cpp.o
 .PHONY : src/graph_builder.o
@@ -225,6 +249,30 @@ src/parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/parser.cpp.s
 .PHONY : src/parser.cpp.s
 
+src/services/currency_service.o: src/services/currency_service.cpp.o
+.PHONY : src/services/currency_service.o
+
+# target to build an object file
+src/services/currency_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o
+.PHONY : src/services/currency_service.cpp.o
+
+src/services/currency_service.i: src/services/currency_service.cpp.i
+.PHONY : src/services/currency_service.i
+
+# target to preprocess a source file
+src/services/currency_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.i
+.PHONY : src/services/currency_service.cpp.i
+
+src/services/currency_service.s: src/services/currency_service.cpp.s
+.PHONY : src/services/currency_service.s
+
+# target to generate assembly for a file
+src/services/currency_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.s
+.PHONY : src/services/currency_service.cpp.s
+
 src/test_igraph.o: src/test_igraph.cpp.o
 .PHONY : src/test_igraph.o
 
@@ -261,6 +309,9 @@ help:
 	@echo "... src/cycle_finder.o"
 	@echo "... src/cycle_finder.i"
 	@echo "... src/cycle_finder.s"
+	@echo "... src/engine/arbitrage_engine.o"
+	@echo "... src/engine/arbitrage_engine.i"
+	@echo "... src/engine/arbitrage_engine.s"
 	@echo "... src/graph_builder.o"
 	@echo "... src/graph_builder.i"
 	@echo "... src/graph_builder.s"
@@ -270,6 +321,9 @@ help:
 	@echo "... src/parser.o"
 	@echo "... src/parser.i"
 	@echo "... src/parser.s"
+	@echo "... src/services/currency_service.o"
+	@echo "... src/services/currency_service.i"
+	@echo "... src/services/currency_service.s"
 	@echo "... src/test_igraph.o"
 	@echo "... src/test_igraph.i"
 	@echo "... src/test_igraph.s"

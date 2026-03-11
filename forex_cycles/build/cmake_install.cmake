@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles
+# Install script for directory: /mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

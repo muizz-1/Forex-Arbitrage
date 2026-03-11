@@ -1,7 +1,7 @@
 CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o: \
- /mnt/c/Muizz/Semester\ 6-ish/Forex\ Arbitrage\ Program/forex_cycles/src/test_igraph.cpp \
+ /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/test_igraph.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Muizz/Semester\ 6-ish/Forex\ Arbitrage\ Program/forex_cycles/src/test_igraph.hpp \
+ /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/test_igraph.hpp \
  /usr/local/include/igraph/igraph.h \
  /usr/local/include/igraph/igraph_version.h \
  /usr/local/include/igraph/igraph_decls.h \

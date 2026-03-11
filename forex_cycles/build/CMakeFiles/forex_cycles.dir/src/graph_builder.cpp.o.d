@@ -1,7 +1,7 @@
 CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o: \
- /mnt/c/Muizz/Semester\ 6-ish/Forex\ Arbitrage\ Program/forex_cycles/src/graph_builder.cpp \
+ /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/graph_builder.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Muizz/Semester\ 6-ish/Forex\ Arbitrage\ Program/forex_cycles/src/graph_builder.hpp \
+ /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/graph_builder.hpp \
  /usr/local/include/igraph/igraph.h \
  /usr/local/include/igraph/igraph_version.h \
  /usr/local/include/igraph/igraph_decls.h \

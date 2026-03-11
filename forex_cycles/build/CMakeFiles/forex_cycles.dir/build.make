@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles"
+CMAKE_SOURCE_DIR = "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build"
+CMAKE_BINARY_DIR = "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/forex_cycles.dir/depend.make
@@ -72,72 +72,100 @@ include CMakeFiles/forex_cycles.dir/flags.make
 CMakeFiles/forex_cycles.dir/src/main.cpp.o: CMakeFiles/forex_cycles.dir/flags.make
 CMakeFiles/forex_cycles.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/forex_cycles.dir/src/main.cpp.o: CMakeFiles/forex_cycles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/forex_cycles.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/main.cpp.o -MF CMakeFiles/forex_cycles.dir/src/main.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/main.cpp.o -c "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/forex_cycles.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/main.cpp.o -MF CMakeFiles/forex_cycles.dir/src/main.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/main.cpp.o -c "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/main.cpp"
 
 CMakeFiles/forex_cycles.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/forex_cycles.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/main.cpp" > CMakeFiles/forex_cycles.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/main.cpp" > CMakeFiles/forex_cycles.dir/src/main.cpp.i
 
 CMakeFiles/forex_cycles.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/forex_cycles.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/main.cpp" -o CMakeFiles/forex_cycles.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/main.cpp" -o CMakeFiles/forex_cycles.dir/src/main.cpp.s
 
 CMakeFiles/forex_cycles.dir/src/parser.cpp.o: CMakeFiles/forex_cycles.dir/flags.make
 CMakeFiles/forex_cycles.dir/src/parser.cpp.o: ../src/parser.cpp
 CMakeFiles/forex_cycles.dir/src/parser.cpp.o: CMakeFiles/forex_cycles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/forex_cycles.dir/src/parser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/parser.cpp.o -MF CMakeFiles/forex_cycles.dir/src/parser.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/parser.cpp.o -c "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/parser.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/forex_cycles.dir/src/parser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/parser.cpp.o -MF CMakeFiles/forex_cycles.dir/src/parser.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/parser.cpp.o -c "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/parser.cpp"
 
 CMakeFiles/forex_cycles.dir/src/parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/forex_cycles.dir/src/parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/parser.cpp" > CMakeFiles/forex_cycles.dir/src/parser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/parser.cpp" > CMakeFiles/forex_cycles.dir/src/parser.cpp.i
 
 CMakeFiles/forex_cycles.dir/src/parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/forex_cycles.dir/src/parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/parser.cpp" -o CMakeFiles/forex_cycles.dir/src/parser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/parser.cpp" -o CMakeFiles/forex_cycles.dir/src/parser.cpp.s
 
 CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o: CMakeFiles/forex_cycles.dir/flags.make
 CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o: ../src/test_igraph.cpp
 CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o: CMakeFiles/forex_cycles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o -MF CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o -c "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/test_igraph.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o -MF CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o -c "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/test_igraph.cpp"
 
 CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/test_igraph.cpp" > CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/test_igraph.cpp" > CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.i
 
 CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/test_igraph.cpp" -o CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/test_igraph.cpp" -o CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.s
 
 CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o: CMakeFiles/forex_cycles.dir/flags.make
 CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o: ../src/graph_builder.cpp
 CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o: CMakeFiles/forex_cycles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o -MF CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o -c "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/graph_builder.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o -MF CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o -c "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/graph_builder.cpp"
 
 CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/graph_builder.cpp" > CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/graph_builder.cpp" > CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.i
 
 CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/graph_builder.cpp" -o CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/graph_builder.cpp" -o CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.s
 
 CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o: CMakeFiles/forex_cycles.dir/flags.make
 CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o: ../src/cycle_finder.cpp
 CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o: CMakeFiles/forex_cycles.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o -MF CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o -c "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/cycle_finder.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o -MF CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o -c "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/cycle_finder.cpp"
 
 CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/cycle_finder.cpp" > CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/cycle_finder.cpp" > CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.i
 
 CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/src/cycle_finder.cpp" -o CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/cycle_finder.cpp" -o CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.s
+
+CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o: CMakeFiles/forex_cycles.dir/flags.make
+CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o: ../src/services/currency_service.cpp
+CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o: CMakeFiles/forex_cycles.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o -MF CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o -c "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/services/currency_service.cpp"
+
+CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/services/currency_service.cpp" > CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.i
+
+CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/services/currency_service.cpp" -o CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.s
+
+CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o: CMakeFiles/forex_cycles.dir/flags.make
+CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o: ../src/engine/arbitrage_engine.cpp
+CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o: CMakeFiles/forex_cycles.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o -MF CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o.d -o CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o -c "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/engine/arbitrage_engine.cpp"
+
+CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/engine/arbitrage_engine.cpp" > CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.i
+
+CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/engine/arbitrage_engine.cpp" -o CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.s
 
 # Object files for target forex_cycles
 forex_cycles_OBJECTS = \
@@ -145,7 +173,9 @@ forex_cycles_OBJECTS = \
 "CMakeFiles/forex_cycles.dir/src/parser.cpp.o" \
 "CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o" \
 "CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o" \
-"CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o"
+"CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o" \
+"CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o" \
+"CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o"
 
 # External object files for target forex_cycles
 forex_cycles_EXTERNAL_OBJECTS =
@@ -155,13 +185,15 @@ forex_cycles: CMakeFiles/forex_cycles.dir/src/parser.cpp.o
 forex_cycles: CMakeFiles/forex_cycles.dir/src/test_igraph.cpp.o
 forex_cycles: CMakeFiles/forex_cycles.dir/src/graph_builder.cpp.o
 forex_cycles: CMakeFiles/forex_cycles.dir/src/cycle_finder.cpp.o
+forex_cycles: CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o
+forex_cycles: CMakeFiles/forex_cycles.dir/src/engine/arbitrage_engine.cpp.o
 forex_cycles: CMakeFiles/forex_cycles.dir/build.make
 forex_cycles: /usr/local/lib/libigraph.a
 forex_cycles: /usr/lib/x86_64-linux-gnu/libm.so
 forex_cycles: /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
 forex_cycles: /usr/lib/x86_64-linux-gnu/libpthread.a
 forex_cycles: CMakeFiles/forex_cycles.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable forex_cycles"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable forex_cycles"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/forex_cycles.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -173,6 +205,6 @@ CMakeFiles/forex_cycles.dir/clean:
 .PHONY : CMakeFiles/forex_cycles.dir/clean
 
 CMakeFiles/forex_cycles.dir/depend:
-	cd "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles" "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles" "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build" "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build" "/mnt/c/Muizz/Semester 6-ish/Forex Arbitrage Program/forex_cycles/build/CMakeFiles/forex_cycles.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles" "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles" "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build" "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build" "/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/build/CMakeFiles/forex_cycles.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/forex_cycles.dir/depend
 
