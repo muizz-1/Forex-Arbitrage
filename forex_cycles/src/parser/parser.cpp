@@ -12,7 +12,7 @@ fetch_and_parse_from_python(
 {
     vector<tuple<string,string,double>> exchange_data;
 
-    string cmd = "python3 ../src/data/FetchData.py";
+    string cmd = "python3 src/data/FetchData.py";
 
     for (auto& c : currencies)
     {
