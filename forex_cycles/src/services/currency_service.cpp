@@ -12,6 +12,11 @@ std::vector<std::string> get_available_currencies() {
         "RUB",
         "KRW",
         "AED",
-        "SAR"
+        "SAR",
+        "PKR",
+        "INR", 
+        "DKK",
+        "HKD",
+        "CZK"
     };
 }

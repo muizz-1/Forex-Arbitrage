@@ -1,0 +1,16 @@
+# build folders
+build/
+*/build/
+forex_cycles/build/
+
+# cmake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# binaries
+*.o
+*.out
+*.exe
+*.log

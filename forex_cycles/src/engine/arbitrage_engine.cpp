@@ -1,7 +1,8 @@
-#include "arbitrage_engine.hpp"
-#include "../parser.hpp"
-#include "../graph_builder.hpp"
-#include "../cycle_finder.hpp"
+#include "../engine/arbitrage_engine.hpp"
+#include "../parser/parser.hpp"
+#include "../graph/graph_builder.hpp"
+#include "../graph/cycle_finder.hpp"
+#include "../simulation/simulation.hpp"
 #include <igraph.h>
 #include <cmath>
 #include <iostream>
@@ -47,8 +48,9 @@ ArbitrageResult run_arbitrage_engine(const ArbitrageRequest& request)
     result.total_weight = 0.0;
     result.profit_percent = 0.0;
 
-    auto exchange_data = fetch_and_parse_from_python();
-
+    auto exchange_data = fetch_and_parse_from_python(
+        request.currencies
+    ); 
     if (exchange_data.empty()) {
         cerr << "No exchange data received\n";
         return result;
@@ -75,19 +77,41 @@ ArbitrageResult run_arbitrage_engine(const ArbitrageRequest& request)
     vector<string> id_to_currency;
     igraph_vector_t weights;
 
+    raw_edges.clear();
+
     igraph_t graph = build_weighted_graph(
         filtered_rates,
         currency_to_id,
         id_to_currency,
-        &weights
+        &weights,
+        raw_edges
     );
+
+    
 
     if (request.best_mode)
         result = best_arbitrage_cycle(&graph, &weights, id_to_currency);
     else
         result = bellman_ford_arbitrage(&graph, &weights, id_to_currency);
 
-    if (result.found)
+    result.found = false;
+    result.edges = raw_edges;
+    result.nodes = id_to_currency;
+
+    TradeResult trade_result = simulate_trade (
+        result.cycle,
+        request.starting_amount,      
+        result.edges,
+        request.tx_cost  
+    );
+
+    result.end_amount = trade_result.end_amount;
+    result.start_amount = request.starting_amount;
+    result.profit_percent; 
+    result.profit_after_cost = trade_result.profit_pct;
+    
+    if (trade_result.profit_pct > 0)
+        result.found = true;
         rotate_cycle_to_base(result.cycle, request.base_currency);
 
     igraph_destroy(&graph);
