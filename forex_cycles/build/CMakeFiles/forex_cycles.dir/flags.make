@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DIGRAPH_STATIC
 
-CXX_INCLUDES = -isystem /usr/local/include/igraph
+CXX_INCLUDES = -I"/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src" -I"/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/engine" -I"/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/rate_service" -I"/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/simulation" -I"/mnt/c/Muizz/Semester 8/Tajir Proj/Forex-Arbitrage/forex_cycles/src/currency_service" -isystem /usr/local/include/igraph
 
 CXX_FLAGS = 
 

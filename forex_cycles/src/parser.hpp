@@ -1,8 +1,10 @@
 #pragma once
-#include <string>
+
 #include <vector>
 #include <tuple>
+#include <string>
 
 using namespace std;
 
-vector<tuple<string, string, double>> fetch_and_parse_from_python();
+vector<tuple<string,double,double,double>>
+fetch_and_parse_from_python();

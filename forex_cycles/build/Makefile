@@ -129,6 +129,30 @@ forex_cycles/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/build
 .PHONY : forex_cycles/fast
 
+src/currency_service/currency_service.o: src/currency_service/currency_service.cpp.o
+.PHONY : src/currency_service/currency_service.o
+
+# target to build an object file
+src/currency_service/currency_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/currency_service/currency_service.cpp.o
+.PHONY : src/currency_service/currency_service.cpp.o
+
+src/currency_service/currency_service.i: src/currency_service/currency_service.cpp.i
+.PHONY : src/currency_service/currency_service.i
+
+# target to preprocess a source file
+src/currency_service/currency_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/currency_service/currency_service.cpp.i
+.PHONY : src/currency_service/currency_service.cpp.i
+
+src/currency_service/currency_service.s: src/currency_service/currency_service.cpp.s
+.PHONY : src/currency_service/currency_service.s
+
+# target to generate assembly for a file
+src/currency_service/currency_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/currency_service/currency_service.cpp.s
+.PHONY : src/currency_service/currency_service.cpp.s
+
 src/cycle_finder.o: src/cycle_finder.cpp.o
 .PHONY : src/cycle_finder.o
 
@@ -249,29 +273,53 @@ src/parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/parser.cpp.s
 .PHONY : src/parser.cpp.s
 
-src/services/currency_service.o: src/services/currency_service.cpp.o
-.PHONY : src/services/currency_service.o
+src/rate_service/rate_service.o: src/rate_service/rate_service.cpp.o
+.PHONY : src/rate_service/rate_service.o
 
 # target to build an object file
-src/services/currency_service.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o
-.PHONY : src/services/currency_service.cpp.o
+src/rate_service/rate_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/rate_service/rate_service.cpp.o
+.PHONY : src/rate_service/rate_service.cpp.o
 
-src/services/currency_service.i: src/services/currency_service.cpp.i
-.PHONY : src/services/currency_service.i
+src/rate_service/rate_service.i: src/rate_service/rate_service.cpp.i
+.PHONY : src/rate_service/rate_service.i
 
 # target to preprocess a source file
-src/services/currency_service.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.i
-.PHONY : src/services/currency_service.cpp.i
+src/rate_service/rate_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/rate_service/rate_service.cpp.i
+.PHONY : src/rate_service/rate_service.cpp.i
 
-src/services/currency_service.s: src/services/currency_service.cpp.s
-.PHONY : src/services/currency_service.s
+src/rate_service/rate_service.s: src/rate_service/rate_service.cpp.s
+.PHONY : src/rate_service/rate_service.s
 
 # target to generate assembly for a file
-src/services/currency_service.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.s
-.PHONY : src/services/currency_service.cpp.s
+src/rate_service/rate_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/rate_service/rate_service.cpp.s
+.PHONY : src/rate_service/rate_service.cpp.s
+
+src/simulation/simulation.o: src/simulation/simulation.cpp.o
+.PHONY : src/simulation/simulation.o
+
+# target to build an object file
+src/simulation/simulation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/simulation/simulation.cpp.o
+.PHONY : src/simulation/simulation.cpp.o
+
+src/simulation/simulation.i: src/simulation/simulation.cpp.i
+.PHONY : src/simulation/simulation.i
+
+# target to preprocess a source file
+src/simulation/simulation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/simulation/simulation.cpp.i
+.PHONY : src/simulation/simulation.cpp.i
+
+src/simulation/simulation.s: src/simulation/simulation.cpp.s
+.PHONY : src/simulation/simulation.s
+
+# target to generate assembly for a file
+src/simulation/simulation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/forex_cycles.dir/build.make CMakeFiles/forex_cycles.dir/src/simulation/simulation.cpp.s
+.PHONY : src/simulation/simulation.cpp.s
 
 src/test_igraph.o: src/test_igraph.cpp.o
 .PHONY : src/test_igraph.o
@@ -306,6 +354,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... forex_cycles"
+	@echo "... src/currency_service/currency_service.o"
+	@echo "... src/currency_service/currency_service.i"
+	@echo "... src/currency_service/currency_service.s"
 	@echo "... src/cycle_finder.o"
 	@echo "... src/cycle_finder.i"
 	@echo "... src/cycle_finder.s"
@@ -321,9 +372,12 @@ help:
 	@echo "... src/parser.o"
 	@echo "... src/parser.i"
 	@echo "... src/parser.s"
-	@echo "... src/services/currency_service.o"
-	@echo "... src/services/currency_service.i"
-	@echo "... src/services/currency_service.s"
+	@echo "... src/rate_service/rate_service.o"
+	@echo "... src/rate_service/rate_service.i"
+	@echo "... src/rate_service/rate_service.s"
+	@echo "... src/simulation/simulation.o"
+	@echo "... src/simulation/simulation.i"
+	@echo "... src/simulation/simulation.s"
 	@echo "... src/test_igraph.o"
 	@echo "... src/test_igraph.i"
 	@echo "... src/test_igraph.s"

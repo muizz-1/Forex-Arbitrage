@@ -1,7 +1,7 @@
-CMakeFiles/forex_cycles.dir/src/services/currency_service.cpp.o: \
- /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/services/currency_service.cpp \
+CMakeFiles/forex_cycles.dir/src/currency_service/currency_service.cpp.o: \
+ /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/currency_service/currency_service.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/services/currency_service.hpp \
+ /mnt/c/Muizz/Semester\ 8/Tajir\ Proj/Forex-Arbitrage/forex_cycles/src/currency_service/currency_service.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

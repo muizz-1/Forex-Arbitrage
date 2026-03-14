@@ -10,6 +10,8 @@
 #include <unordered_map>
 #include <vector>
 #include <string>
+#include <set>
+#include "rate_service/rate_service.hpp"
 
 using namespace std;
 
@@ -40,58 +42,109 @@ void rotate_cycle_to_base(vector<string>& cycle, const string& base)
     cycle.push_back(cycle.front());
 }
 
-ArbitrageResult run_arbitrage_engine(const ArbitrageRequest& request)
+
+ArbitrageResult run_arbitrage_engine(
+    const ArbitrageRequest& req)
 {
-    ArbitrageResult result{};
-    result.found = false;
-    result.total_weight = 0.0;
-    result.profit_percent = 0.0;
+    ArbitrageResult result;
 
-    auto exchange_data = fetch_and_parse_from_python();
+    // -----------------------------
+    // 1. fetch raw
+    // -----------------------------
 
-    if (exchange_data.empty()) {
-        cerr << "No exchange data received\n";
-        return result;
-    }
+    auto raw = fetch_and_parse_from_python();
 
-    vector<tuple<string, string, double>> filtered_rates;
+    // -----------------------------
+    // 2. normalize (bid/ask → rates)
+    // -----------------------------
 
-    for (const auto& r : exchange_data) {
-        const string& base = get<0>(r);
-        const string& quote = get<1>(r);
+    auto rates = normalize_rates(raw);
 
-        if (contains(request.currencies, base) &&
-            contains(request.currencies, quote)) {
+    // -----------------------------
+    // 3. allowed currencies
+    // -----------------------------
+
+    std::set<std::string> allowed(
+        req.currencies.begin(),
+        req.currencies.end()
+    );
+
+    // -----------------------------
+    // 4. filter
+    // -----------------------------
+
+    std::vector<
+        std::tuple<
+            std::string,
+            std::string,
+            double
+        >
+    > filtered_rates;
+
+    for (auto& r : rates)
+    {
+        const std::string& base = std::get<0>(r);
+        const std::string& quote = std::get<1>(r);
+
+        if (allowed.count(base) &&
+            allowed.count(quote))
+        {
             filtered_rates.push_back(r);
         }
     }
 
-    if (filtered_rates.empty()) {
-        cerr << "No rates after filtering currencies\n";
+    if (filtered_rates.empty())
         return result;
-    }
 
-    unordered_map<string, int> currency_to_id;
-    vector<string> id_to_currency;
-    igraph_vector_t weights;
+    // -----------------------------
+    // 5. build graph
+    // -----------------------------
 
-    igraph_t graph = build_weighted_graph(
+    std::unordered_map<std::string,int>
+        currency_to_id;
+
+    std::vector<std::string>
+        id_to_currency;
+
+    igraph_vector_t* weights =
+        new igraph_vector_t;
+
+    igraph_t* graph =
+        new igraph_t;
+
+    *graph = build_weighted_graph(
         filtered_rates,
         currency_to_id,
         id_to_currency,
-        &weights
+        weights
     );
 
-    if (request.best_mode)
-        result = best_arbitrage_cycle(&graph, &weights, id_to_currency);
-    else
-        result = bellman_ford_arbitrage(&graph, &weights, id_to_currency);
+    // -----------------------------
+    // 6. find cycle
+    // -----------------------------
 
-    if (result.found)
-        rotate_cycle_to_base(result.cycle, request.base_currency);
+    auto cycle = find_arbitrage_bellman_ford(
+        graph,
+        weights,
+        id_to_currency.size()
+    );
 
-    igraph_destroy(&graph);
-    igraph_vector_destroy(&weights);
+    if (cycle.empty())
+        return result;
+
+    // -----------------------------
+    // 7. fill result
+    // -----------------------------
+
+    result.found = true;
+    result.graph = graph;
+    result.weights = weights;
+    result.cycle_ids = cycle;
+
+    for (int id : cycle)
+        result.cycle.push_back(
+            id_to_currency[id]
+        );
 
     return result;
 }

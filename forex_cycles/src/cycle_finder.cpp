@@ -8,9 +8,200 @@
 #include <algorithm>
 #include <limits>
 #include "engine/engine_types.hpp"
-
+#include "simulation/simulation.hpp"
 
 using namespace std;
+
+vector<int>
+find_arbitrage_bellman_ford(
+    const igraph_t* graph,
+    const igraph_vector_t* weights,
+    int n
+)
+{
+    vector<double> dist(
+        n,
+        numeric_limits<double>::infinity()
+    );
+
+    vector<int> parent(
+        n,
+        -1
+    );
+
+    dist[0] = 0;
+
+    int ecount =
+        igraph_ecount(graph);
+
+    // relax edges n-1 times
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int eid = 0;
+             eid < ecount;
+             eid++)
+        {
+            igraph_integer_t from, to;
+
+            igraph_edge(
+                graph,
+                eid,
+                &from,
+                &to
+            );
+
+            double w =
+                VECTOR(*weights)[eid];
+
+            if (dist[from] + w <
+                dist[to])
+            {
+                dist[to] =
+                    dist[from] + w;
+
+                parent[to] =
+                    from;
+            }
+        }
+    }
+
+    // check negative cycle
+    for (int eid = 0;
+         eid < ecount;
+         eid++)
+    {
+        igraph_integer_t from, to;
+
+        igraph_edge(
+            graph,
+            eid,
+            &from,
+            &to
+        );
+
+        double w =
+            VECTOR(*weights)[eid];
+
+        if (dist[from] + w <
+            dist[to])
+        {
+            // negative cycle found
+
+            vector<int> cycle;
+
+            int cur = to;
+
+            // move inside cycle
+            for (int i = 0;
+                 i < n;
+                 i++)
+                cur = parent[cur];
+
+            int start = cur;
+
+            do
+            {
+                cycle.push_back(cur);
+                cur = parent[cur];
+            }
+            while (cur != start &&
+                   cur != -1);
+
+            cycle.push_back(start);
+
+            return cycle;
+        }
+    }
+
+    return {};
+}
+
+
+
+
+
+
+
+std::vector<int>
+find_one_arbitrage_cycle(
+    const igraph_t* graph,
+    const igraph_vector_t* weights,
+    const std::vector<std::string>& id_to_currency,
+    double threshold
+) {
+    std::vector<int> result;
+
+    igraph_vector_int_list_t cycles;
+
+    igraph_vector_int_list_init(&cycles, 0);
+
+    igraph_simple_cycles(
+        graph,
+        &cycles,
+        nullptr,
+        IGRAPH_OUT,
+        1,
+        10
+    );
+
+    for (igraph_integer_t i = 0;
+         i < igraph_vector_int_list_size(&cycles);
+         i++)
+    {
+        const igraph_vector_int_t* c =
+            igraph_vector_int_list_get_ptr(
+                &cycles, i
+            );
+
+        double sum = 0;
+
+        for (int j = 0;
+             j < igraph_vector_int_size(c);
+             j++)
+        {
+            int from =
+                VECTOR(*c)[j];
+
+            int to =
+                VECTOR(*c)[
+                    (j + 1)
+                    % igraph_vector_int_size(c)
+                ];
+
+            igraph_integer_t eid;
+
+            igraph_get_eid(
+                graph,
+                &eid,
+                from,
+                to,
+                IGRAPH_DIRECTED,
+                true
+            );
+
+            sum += VECTOR(*weights)[eid];
+        }
+
+        if (sum < threshold) {
+
+            for (int j = 0;
+                 j < igraph_vector_int_size(c);
+                 j++)
+            {
+                result.push_back(
+                    VECTOR(*c)[j]
+                );
+            }
+
+            break;
+        }
+    }
+
+    igraph_vector_int_list_destroy(&cycles);
+
+    return result;
+}
+
 
 void find_arbitrage_cycles(const igraph_t* graph,
                            const igraph_vector_t* weights,
@@ -110,7 +301,6 @@ void find_best_arbitrage_cycle(const igraph_t* graph,
         cout << "\nWeight: " << fixed << setprecision(6) << best_weight;
         cout << "\nProfit: " << profit * 100 << "%\n";
     }
-
     igraph_vector_int_list_destroy(&cycles);
 }
 
@@ -185,7 +375,6 @@ ArbitrageResult bellman_ford_arbitrage(const igraph_t* graph,
             return result;
         }
     }
-
     return result;
 }
 
