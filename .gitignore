@@ -1,16 +1,37 @@
-# build folders
+# Node
+node_modules/
+dist/
 build/
-*/build/
-forex_cycles/build/
+.next/
+out/
 
-# cmake
-CMakeFiles/
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+
+# CMake / C++
+build/
 CMakeCache.txt
-cmake_install.cmake
+CMakeFiles/
 Makefile
-
-# binaries
+cmake_install.cmake
 *.o
 *.out
 *.exe
+
+# Logs
 *.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Env files
+.env.local
+.env.development
+.env.production

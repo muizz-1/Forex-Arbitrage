@@ -2,8 +2,17 @@ from fastapi import FastAPI
 from models import ArbitrageRequest
 from engine_runner import run_engine
 from pprint import pprint
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow all for dev
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def root():

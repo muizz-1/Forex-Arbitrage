@@ -38,5 +38,12 @@ def run_engine(req: ArbitrageRequest):
     # print("STDERR =", result.stderr)
 
     output = result.stdout.strip()
-
+    if not output:
+        return {
+            "cycle": [],
+            "profit_before": 0,
+            "profit_after": 0,
+            "start": 0,
+            "end": 0
+        }
     return json.loads(output)
