@@ -31,7 +31,7 @@ def run_engine(req: ArbitrageRequest):
         cmd,
         capture_output=True,
         text=True,
-        cwd=str(ROOT_DIR / "forex_cycles")
+        cwd=str(ROOT_DIR / "forex_cycles" / "build")
     )
 
     # print("STDOUT =", result.stdout)
